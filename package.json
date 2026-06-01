@@ -1,0 +1,14 @@
+{
+    "private": true,
+    "workspaces": [
+        "backend",
+        "frontend",
+        "packages/*"
+    ],
+    "scripts": {
+        "dev": "concurrently -n BACKEND,FRONTEND \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\""
+    },
+    "devDependencies": {
+        "concurrently": "^10.0.1"
+    }
+}
